@@ -1,0 +1,44 @@
+{
+    "name": "mizbanpaytakht/whmcs-backblaze",
+    "type": "library",
+    "description": "PHP Module for working with backblaze B2 cloud storage and WHMCS.",
+    "keywords": ["cloud-storage", "b2", "storage", "backblaze", "cloud", "filesystem", "backup", "WHMCS"],
+    "homepage": "https://github.com/mizbanpaytakht/whmcs-backblaze",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kamran Biglari",
+            "email": "kamran.biglari@gmail.com",
+            "homepage": "https://ehost.host",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.1|^7.0",
+        "nesbot/carbon": "2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "BackblazeB2\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BackblazeB2\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "format": "phpcbf --standard=psr2 src/"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
